@@ -1,0 +1,320 @@
+:root {
+  --bg-dark: #0f1026;
+  --card-bg: #fbf4e4;
+  --accent-gold: #e5ad35;
+  --accent-gold-hover: #d49c25;
+  --text-dark: #1f2937;
+  --text-muted: #6b7280;
+  --border-color: #e5e7eb;
+  --error-color: #ef4444;
+  --glow-color: rgba(229, 173, 53, 0.15);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, sans-serif;
+}
+
+body {
+  background-color: var(--bg-dark);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow-x: hidden;
+  padding: 20px;
+}
+
+/* Background Animated Ambient Glows */
+.bg-glow {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(100px);
+  z-index: 0;
+  animation: pulse 8s infinite alternate ease-in-out;
+}
+
+.glow-1 {
+  width: 300px;
+  height: 300px;
+  background: rgba(229, 173, 53, 0.25);
+  top: 10%;
+  left: 15%;
+}
+
+.glow-2 {
+  width: 350px;
+  height: 350px;
+  background: rgba(59, 130, 246, 0.2);
+  bottom: 10%;
+  right: 15%;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1) translate(0, 0); }
+  100% { transform: scale(1.2) translate(20px, -20px); }
+}
+
+/* Card Container */
+.login-container {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: 440px;
+  animation: slideUp 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.login-card {
+  background: var(--card-bg);
+  border-radius: 16px;
+  padding: 40px 32px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+}
+
+/* Brand Header */
+.brand-header {
+  text-align: center;
+  margin-bottom: 28px;
+}
+
+.logo {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 16px;
+  font-weight: 700;
+  font-size: 22px;
+  color: var(--bg-dark);
+}
+
+.logo-icon {
+  background: var(--bg-dark);
+  color: #fff;
+  padding: 4px 10px;
+  border-radius: 8px;
+  font-size: 18px;
+}
+
+.brand-header h2 {
+  font-size: 24px;
+  color: var(--text-dark);
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+
+.brand-header p {
+  color: var(--text-muted);
+  font-size: 14px;
+}
+
+/* Form Styles */
+.input-group {
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.label-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 6px;
+}
+
+label {
+  display: block;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text-dark);
+  margin-bottom: 6px;
+}
+
+.forgot-pass {
+  font-size: 12px;
+  color: var(--bg-dark);
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.2s;
+}
+
+.forgot-pass:hover {
+  color: var(--accent-gold-hover);
+  text-decoration: underline;
+}
+
+.input-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.input-icon {
+  position: absolute;
+  left: 14px;
+  color: var(--text-muted);
+  font-size: 15px;
+  transition: color 0.2s;
+}
+
+.toggle-password {
+  position: absolute;
+  right: 14px;
+  color: var(--text-muted);
+  cursor: pointer;
+  font-size: 15px;
+  transition: color 0.2s;
+}
+
+.toggle-password:hover {
+  color: var(--text-dark);
+}
+
+/* Updated Input selector to support text/email/tel fields */
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+  width: 100%;
+  padding: 12px 40px 12px 40px;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  font-size: 14px;
+  outline: none;
+  background: #f9fafb;
+  transition: all 0.25s ease;
+}
+
+input:focus {
+  background: #fff;
+  border-color: var(--accent-gold);
+  box-shadow: 0 0 0 3px var(--glow-color);
+}
+
+input:focus + .input-icon,
+.input-wrapper:focus-within .input-icon {
+  color: var(--bg-dark);
+}
+
+.error-msg {
+  display: none;
+  color: var(--error-color);
+  font-size: 11px;
+  margin-top: 4px;
+}
+
+.input-group.error input {
+  border-color: var(--error-color);
+  background-color: #fef2f2;
+}
+
+.input-group.error .error-msg {
+  display: block;
+}
+
+/* Options & Checkbox */
+.options-row {
+  display: flex;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.remember-me {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  font-size: 13px;
+  color: var(--text-muted);
+  user-select: none;
+}
+
+/* Primary Submit Button */
+.btn-submit {
+  width: 100%;
+  padding: 12px;
+  background: var(--accent-gold);
+  color: #000;
+  border: none;
+  border-radius: 8px;
+  font-size: 15px;
+  font-weight: 700;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(229, 173, 53, 0.3);
+}
+
+.btn-submit:hover {
+  background: var(--accent-gold-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(229, 173, 53, 0.4);
+}
+
+.btn-submit:hover .icon-arrow {
+  transform: translateX(4px);
+}
+
+.btn-submit:active {
+  transform: translateY(0);
+}
+
+.icon-arrow {
+  transition: transform 0.2s ease;
+}
+
+/* Card Footer */
+.card-footer {
+  text-align: center;
+  margin-top: 24px;
+  font-size: 13px;
+  color: var(--text-muted);
+}
+
+.card-footer a {
+  color: var(--bg-dark);
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.card-footer a:hover {
+  text-decoration: underline;
+}
+
+/* Shake Animation for Invalid Submission */
+.shake {
+  animation: shake 0.4s ease-in-out;
+}
+
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  20%, 60% { transform: translateX(-8px); }
+  40%, 80% { transform: translateX(8px); }
+}
+
+/* Responsive Styles */
+@media (max-width: 480px) {
+  .login-card {
+    padding: 28px 20px;
+  }
+
+  .brand-header h2 {
+    font-size: 20px;
+  }
+}

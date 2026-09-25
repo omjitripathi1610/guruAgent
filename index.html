@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Chanakya-Marg | Adaptive Study Plan</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap"
+    rel="stylesheet"
+  />
+
+  <link rel="stylesheet" href="stplan.css" />
+</head>
+
+<body>
+
+  <!-- Mobile Overlay -->
+  <div class="mobile-overlay" id="mobileOverlay"></div>
+
+  <!-- Sidebar -->
+  <aside class="sidebar" id="sidebar">
+
+    <div class="brand">
+      <div class="brand-mark">
+        ॐ
+      </div>
+
+      <div class="brand-text">
+        <strong>GuruAgent</strong>
+        <span>Chanakya-Marg</span>
+      </div>
+    </div>
+
+    <nav class="nav">
+
+      <button class="nav-item" data-section="dashboard">
+        <span class="nav-icon">⌂</span>
+        <span>Dashboard</span>
+      </button>
+
+      <button class="nav-item active" data-section="study">
+        <span class="nav-icon">▣</span>
+        <span>Study Plan</span>
+      </button>
+
+      <button class="nav-item" data-section="practice">
+        <span class="nav-icon">✓</span>
+        <span>Practice</span>
+      </button>
+
+      <button class="nav-item" data-section="progress">
+        <span class="nav-icon">↗</span>
+        <span>Progress</span>
+      </button>
+
+      <button class="nav-item" data-section="iks">
+        <span class="nav-icon">✦</span>
+        <span>IKS Insights</span>
+      </button>
+
+      <button class="nav-item" data-section="profile">
+        <span class="nav-icon">◉</span>
+        <span>Profile</span>
+      </button>
+
+    </nav>
+
+    <div class="sidebar-bottom">
+      <div class="agent-status">
+        <span class="status-dot"></span>
+        <span>Agent Active</span>
+      </div>
+
+      <div class="mini-user">
+        <div class="avatar">P</div>
+        <div>
+          <strong>Prince</strong>
+          <span>BCA • II Year</span>
+        </div>
+      </div>
+    </div>
+  </aside>
+
+  <!-- Main -->
+  <main class="main">
+
+    <!-- Top Bar -->
+    <header class="topbar">
+
+      <button class="mobile-menu" id="mobileMenuBtn" aria-label="Open menu">
+        ☰
+      </button>
+
+      <div class="header-copy">
+        <div class="eyebrow">CHANAKYA-MARG • ADAPTIVE MENTOR</div>
+        <h1>Your Adaptive Study Plan</h1>
+        <p>
+          A personalized plan that evolves with your learning.
+        </p>
+      </div>
+
+      <div class="header-actions">
+
+        <div class="exam-countdown">
+          <span>Exam Countdown</span>
+          <strong id="countdown">15 Days Remaining</strong>
+        </div>
+
+        <div class="date-control">
+          <span>◷</span>
+          <span id="currentDate">Oct 1</span>
+        </div>
+
+        <select id="weekSelect" class="week-select">
+          <option value="1">Week 1</option>
+          <option value="2" selected>Week 2</option>
+          <option value="3">Week 3</option>
+          <option value="4">Week 4</option>
+        </select>
+
+      </div>
+
+    </header>
+
+    <!-- Fake page sections / navigation demo -->
+    <section class="notice-bar" id="pageNotice">
+      <div class="notice-icon">✦</div>
+      <div>
+        <strong>Study Plan</strong>
+        <span>Observe your progress. Let the agent adapt your plan.</span>
+      </div>
+    </section>
+
+    <!-- Main grid -->
+    <section class="content-grid">
+
+      <!-- Left Content -->
+      <div class="primary-column">
+
+        <!-- Weekly Timeline -->
+        <section class="panel timeline-panel">
+
+          <div class="section-header">
+
+            <div>
+              <span class="section-kicker">WEEKLY PLAN</span>
+              <h2>Beautiful weekly study-plan timeline</h2>
+            </div>
+
+            <div class="timeline-controls">
+              <button class="icon-button" id="prevWeekBtn" aria-label="Previous week">
+                ‹
+              </button>
+
+              <button class="icon-button" id="nextWeekBtn" aria-label="Next week">
+                ›
+              </button>
+            </div>
+
+          </div>
+
+          <div class="timeline-wrapper">
+            <div class="timeline" id="timeline"></div>
+          </div>
+
+        </section>
+
+        <!-- Weekly Summary -->
+        <section class="summary-grid">
+
+          <article class="summary-card">
+            <div class="summary-top">
+              <span class="summary-value" id="plannedHours">12.5 hrs</span>
+              <span class="summary-icon purple">Σ</span>
+            </div>
+            <p>Planned Study</p>
+          </article>
+
+          <article class="summary-card">
+            <div class="summary-top">
+              <span class="summary-value" id="completedHours">8.2 hrs</span>
+              <span class="summary-icon green">✓</span>
+            </div>
+            <p>Completed</p>
+          </article>
+
+          <article class="summary-card">
+            <div class="summary-top">
+              <span class="summary-value" id="weeklyProgress">66%</span>
+              <span class="summary-icon bars">
+                <i></i>
+                <i></i>
+                <i></i>
+                <i></i>
+                <i class="active"></i>
+              </span>
+            </div>
+            <p>Weekly Progress</p>
+          </article>
+
+        </section>
+
+        <!-- Adaptive Explanation -->
+        <section class="panel adapt-panel">
+
+          <div class="adapt-main">
+
+            <div class="section-header compact">
+              <div>
+                <span class="section-kicker">ADAPTIVE ENGINE</span>
+                <h2>Why was my plan changed?</h2>
+              </div>
+            </div>
+
+            <div class="adapt-flow">
+
+              <div class="flow-item active">
+                <span>Observe</span>
+              </div>
+
+              <span class="flow-arrow">→</span>
+
+              <div class="flow-item active">
+                <span>Analyze</span>
+              </div>
+
+              <span class="flow-arrow">→</span>
+
+              <div class="flow-item active">
+                <span>Decide</span>
+              </div>
+
+              <span class="flow-arrow">→</span>
+
+              <div class="flow-item active">
+                <span>Adapt</span>
+              </div>
+
+              <span class="flow-arrow">→</span>
+
+              <div class="flow-item">
+                <span>Track</span>
+              </div>
+
+            </div>
+
+          </div>
+
+          <div class="adapt-copy">
+
+            <p id="adaptDescription">
+              Your plan automatically changes when your performance,
+              available time, or learning progress changes.
+            </p>
+
+            <div class="adapt-actions">
+              <button class="primary-button" id="adaptPlanBtn">
+                Adapt My Plan
+              </button>
+
+              <button class="secondary-button" id="viewProgressBtn">
+                View Full Progress
+              </button>
+            </div>
+
+          </div>
+
+        </section>
+
+      </div>
+
+      <!-- Right Content -->
+      <aside class="secondary-column">
+
+        <!-- Agent Decision -->
+        <section class="side-card decision-card">
+
+          <div class="side-card-header">
+            <div>
+              <span class="section-kicker">AI MENTOR</span>
+              <h3>GuruAgent Decision</h3>
+            </div>
+
+            <span class="agent-badge">
+              Active
+            </span>
+          </div>
+
+          <div class="decision-flow">
+
+            <div class="decision-step">
+              <span class="decision-label">Observed</span>
+              <p id="decisionObserved">
+                OS quiz accuracy dropped to <strong>42%</strong>.
+              </p>
+            </div>
+
+            <div class="decision-arrow">↓</div>
+
+            <div class="decision-step">
+              <span class="decision-label">Decision</span>
+              <p id="decisionText">
+                Increase reinforcement for Process Scheduling.
+              </p>
+            </div>
+
+            <div class="decision-arrow">↓</div>
+
+            <div class="decision-step">
+              <span class="decision-label">Action Taken</span>
+              <p id="decisionAction">
+                Added 25 minutes of targeted practice before the next mock test.
+              </p>
+            </div>
+
+            <div class="decision-arrow">↓</div>
+
+            <div class="decision-step">
+              <span class="decision-label">Next Review</span>
+              <p id="decisionReview">
+                Thursday, 7:30 PM
+              </p>
+            </div>
+
+          </div>
+
+          <button class="full-width-button" id="viewDecisionBtn">
+            View Decision Details
+          </button>
+
+        </section>
+
+        <!-- Learning Strategy -->
+        <section class="side-card strategy-card">
+
+          <div class="strategy-symbol">
+            ✧
+          </div>
+
+          <span class="section-kicker">LEARNING STRATEGY</span>
+
+          <h3>Abhyāsa —<br />Repeated Practice</h3>
+
+          <p id="strategyText">
+            GuruAgent selected this strategy because repeated practice
+            can reinforce the identified weak area.
+          </p>
+
+          <div class="strategy-loop">
+            <span>Practice</span>
+            <span>→</span>
+            <span>Assess</span>
+            <span>→</span>
+            <span>Improve</span>
+          </div>
+
+        </section>
+
+      </aside>
+
+    </section>
+
+    <!-- Demo Task Strip -->
+    <section class="bottom-panel panel">
+
+      <div class="bottom-panel-header">
+        <div>
+          <span class="section-kicker">TODAY</span>
+          <h2>Quick actions</h2>
+        </div>
+
+        <span class="small-muted" id="taskStatusText">
+          2 of 4 tasks completed
+        </span>
+      </div>
+
+      <div class="task-list" id="taskList"></div>
+
+    </section>
+
+  </main>
+
+  <!-- Modal -->
+  <div class="modal-backdrop" id="modalBackdrop">
+
+    <div class="modal" role="dialog" aria-modal="true">
+
+      <button class="modal-close" id="modalClose" aria-label="Close">
+        ×
+      </button>
+
+      <span class="section-kicker">AGENT DECISION DETAILS</span>
+
+      <h2 id="modalTitle">
+        Why GuruAgent changed your plan
+      </h2>
+
+      <div class="modal-summary">
+        <div class="modal-metric">
+          <span>Previous accuracy</span>
+          <strong>42%</strong>
+        </div>
+
+        <div class="modal-metric">
+          <span>Weak topic</span>
+          <strong>Process Scheduling</strong>
+        </div>
+
+        <div class="modal-metric">
+          <span>New reinforcement</span>
+          <strong>+25 min</strong>
+        </div>
+      </div>
+
+      <div class="modal-section">
+        <h4>What the agent observed</h4>
+        <p id="modalObserved">
+          Your recent Operating Systems quiz score fell below the target
+          threshold. The largest errors came from scheduling algorithms
+          and response-time calculations.
+        </p>
+      </div>
+
+      <div class="modal-section">
+        <h4>What the agent decided</h4>
+        <p id="modalDecision">
+          The system increased reinforcement for Process Scheduling and
+          placed it before the next mixed mock test.
+        </p>
+      </div>
+
+      <div class="modal-section">
+        <h4>Why this helps</h4>
+        <p>
+          Instead of keeping the original plan unchanged, the system
+          prioritizes the weakest topic and reduces unnecessary repetition
+          in areas where your performance is already strong.
+        </p>
+      </div>
+
+      <button class="primary-button modal-button" id="modalDoneBtn">
+        Got it
+      </button>
+
+    </div>
+  </div>
+
+  <script src="studyPlan.js"></script>
+</body>
+</html>

@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GuruAgent — AI-Powered Personalized Learning & IKS Insights</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="landing.css">
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+
+    <!-- Header -->
+    <header class="navbar">
+        <div class="navbar-container">
+            <!-- Logo -->
+            <a href="#" class="logo-group">
+                <div class="logo-box">G</div>
+                <div class="logo-text">
+                    <span class="logo-title">GuruAgent</span>
+                    <span class="logo-subtitle">IKS Adaptive AI</span>
+                </div>
+            </a>
+
+            <!-- Desktop Nav Links -->
+            <nav class="desktop-nav">
+                <a href="#home" class="nav-link active">Home</a>
+                <a href="#features" class="nav-link">Features</a>
+                <a href="#how-it-works" class="nav-link">How It Works</a>
+                
+            </nav>
+
+            <!-- Actions -->
+            <div class="header-actions">
+                <a href="login.html" class="btn-login">Log In</a>
+                <a href="signup.html" class="btn-signup">Sign Up</a>
+            </div>
+
+            <!-- Mobile menu button -->
+            <button id="mobile-menu-btn" class="mobile-menu-btn" aria-label="Toggle Menu">
+                <i data-lucide="menu" class="icon-md"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Navigation Menu -->
+        <div id="mobile-menu" class="mobile-menu hidden">
+            <a href="#home" class="mobile-nav-link active">Home</a>
+            <a href="#features" class="mobile-nav-link">Features</a>
+            <a href="#iks" class="mobile-nav-link">IKS Insights</a>
+            <a href="#how-it-works" class="mobile-nav-link">How It Works</a>
+            <div class="mobile-auth-actions">
+                <a href="login.html" class="btn-login">Log In</a>
+                <a href="signup.html" class="btn-signup">Sign Up</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-section">
+        <div class="container">
+            <div class="hero-grid">
+                
+                <!-- Left Hero Text -->
+                <div class="hero-text-col">
+                    <div class="badge-pill">
+                        <span class="badge-ping"></span>
+                        <span>Next-Gen Autonomous AI Tutor & IKS Framework</span>
+                    </div>
+
+                    <h1 class="hero-title">
+                        Master Any Exam with <br class="hidden-sm-inline" />
+                        <span class="gradient-text">
+                            Agentic Intelligence & Wisdom
+                        </span>
+                    </h1>
+
+                    <p class="hero-description">
+                        GuruAgent optimizes your study workflow through continuous AI reasoning combined with timeless Indian Knowledge Systems (<strong>Abhyāsa & Svādhyāya</strong>).
+                    </p>
+
+                   <div class="hero-cta-group">
+                        <a href="signup.html" class="btn-primary">
+                            <span>Get Started Free</span>
+                            <i data-lucide="sparkles" class="icon-sm text-gold"></i>
+                        </a>
+                        <a href="login.html" class="btn-secondary">
+                            <i data-lucide="log-in" class="icon-sm text-muted"></i>
+                            <span>Log In</span>
+                        </a>
+                    </div>
+
+                    <!-- Micro Social Proof -->
+                    <div class="social-proof">
+                        <div class="proof-item">
+                            <i data-lucide="check-circle-2" class="icon-sm text-emerald"></i>
+                            <span>Adaptive Schedule</span>
+                        </div>
+                        <div class="proof-item">
+                            <i data-lucide="check-circle-2" class="icon-sm text-emerald"></i>
+                            <span>Real-time Decision Feed</span>
+                        </div>
+                        <div class="proof-item">
+                            <i data-lucide="check-circle-2" class="icon-sm text-emerald"></i>
+                            <span>IKS Self-reflection</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Hero Visual Preview -->
+                <div class="hero-visual-col">
+                    <div class="glow-bg"></div>
+                    
+                    <div class="hero-card">
+                        <!-- Mini Header -->
+                        <div class="card-header">
+                            <div class="card-title-group">
+                                <div class="card-logo">G</div>
+                                <div>
+                                    <p class="card-subtitle">Active Agent Reasoning</p>
+                                    <p class="card-title">GuruAgent Engine v2.4</p>
+                                </div>
+                            </div>
+                            <span class="status-badge">
+                                <span class="status-dot"></span> Active
+                            </span>
+                        </div>
+
+                        <!-- Priority Highlight Preview Card -->
+                        <div class="card-priority">
+                            <div class="priority-header">
+                                <span>Priority Focus</span>
+                                <span class="priority-days">15 Days to Exam</span>
+                            </div>
+                            <p class="priority-title">Operating Systems — Process Scheduling</p>
+                            <div class="progress-bar-bg">
+                                <div class="progress-bar-fill" style="width: 64%"></div>
+                            </div>
+                            <div class="priority-footer">
+                                <span>Progress: 64%</span>
+                                <span class="text-emerald">+12% this week</span>
+                            </div>
+                        </div>
+
+                        <!-- Mini Decision Feed -->
+                        <div class="decision-feed">
+                            <p class="feed-label">Decision Feed</p>
+                            <div class="feed-item">
+                                <div class="feed-icon">
+                                    <i data-lucide="brain-circuit" class="icon-xs"></i>
+                                </div>
+                                <p class="feed-text">
+                                    OS quiz score identified weak areas in Semaphores. Automatically scheduling a 15-min reinforcement session.
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- Quick Action Button Mock -->
+                        <div class="card-action">
+                            <button class="btn-gold-full">
+                                <span>Start Next Micro-Lesson</span>
+                                <i data-lucide="arrow-right" class="icon-sm"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="features-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-subtitle">Architected For Mastery</h2>
+                <p class="section-title">
+                    Intelligent Features tailored to your exam target
+                </p>
+                <p class="section-description">
+                    GuruAgent combines intelligent algorithms with structured learning pathways to ensure maximum retention and zero time wasted.
+                </p>
+            </div>
+
+            <div class="features-grid">
+                <!-- Feature 1 -->
+                <div class="feature-card">
+                    <div class="feature-icon-box">
+                        <i data-lucide="calendar-check" class="icon-md"></i>
+                    </div>
+                    <h3 class="feature-title">Adaptive Weekly Study Plan</h3>
+                    <p class="feature-desc">
+                        Dynamic daily schedules that automatically adjust based on your progress, exam deadlines, and daily available study hours.
+                    </p>
+                </div>
+
+                <!-- Feature 2 -->
+                <div class="feature-card">
+                    <div class="feature-icon-box">
+                        <i data-lucide="workflow" class="icon-md"></i>
+                    </div>
+                    <h3 class="feature-title">Autonomous AI Reasoning Flow</h3>
+                    <p class="feature-desc">
+                        Continuous cycles of Analyze → Plan → Practice → Evaluate → Adapt to deliver hyper-relevant practice modules.
+                    </p>
+                </div>
+
+                <!-- Feature 3 -->
+                <div class="feature-card">
+                    <div class="feature-icon-box">
+                        <i data-lucide="trending-up" class="icon-md"></i>
+                    </div>
+                    <h3 class="feature-title">Real-Time Analytics & Wave Charts</h3>
+                    <p class="feature-desc">
+                        Visual performance tracking charts to measure retention velocity, topic mastery levels, and consistency scores.
+                    </p>
+                </div>
+
+                <!-- Feature 4 -->
+                <div class="feature-card">
+                    <div class="feature-icon-box">
+                        <i data-lucide="zap" class="icon-md"></i>
+                    </div>
+                    <h3 class="feature-title">Priority Topic Recommendation</h3>
+                    <p class="feature-desc">
+                        Never wonder what to study next. GuruAgent pinpoints the exact high-yield topics requiring immediate focus.
+                    </p>
+                </div>
+
+                <!-- Feature 5 -->
+                <div class="feature-card">
+                    <div class="feature-icon-box">
+                        <i data-lucide="message-square" class="icon-md"></i>
+                    </div>
+                    <h3 class="feature-title">Transparent Decision Feed</h3>
+                    <p class="feature-desc">
+                        Understand *why* the AI recommends specific topics with clear, natural language agent explainability.
+                    </p>
+                </div>
+
+                <!-- Feature 6 -->
+                <div class="feature-card">
+                    <div class="feature-icon-box">
+                        <i data-lucide="shield-check" class="icon-md"></i>
+                    </div>
+                    <h3 class="feature-title">Curated Exam Readiness</h3>
+                    <p class="feature-desc">
+                        Countdown timers, targeted mock sessions, and tailored test strategies to build confidence on exam day.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- How It Works Section -->
+    <section id="how-it-works" class="workflow-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-subtitle">Workflow</h2>
+                <p class="section-title">
+                    How GuruAgent Powers Your Prep
+                </p>
+                <p class="section-description">
+                    5 continuous steps designed to take you from initial syllabus assessment to complete exam readiness.
+                </p>
+            </div>
+
+            <div class="workflow-grid">
+                <!-- Step 1 -->
+                <div class="step-card">
+                    <div class="step-number">1</div>
+                    <div class="step-title">Analyze</div>
+                    <p class="step-desc">Scans syllabus, mock scores, and deadline dates to locate knowledge gaps.</p>
+                </div>
+
+                <!-- Step 2 -->
+                <div class="step-card">
+                    <div class="step-number">2</div>
+                    <div class="step-title">Plan</div>
+                    <p class="step-desc">Generates a dynamic weekly schedule prioritized by topic weightage.</p>
+                </div>
+
+                <!-- Step 3 -->
+                <div class="step-card">
+                    <div class="step-number">3</div>
+                    <div class="step-title">Practice</div>
+                    <p class="step-desc">Delivers adaptive micro-quizzes adhering to Abhyāsa principles.</p>
+                </div>
+
+                <!-- Step 4 -->
+                <div class="step-card">
+                    <div class="step-number">4</div>
+                    <div class="step-title">Evaluate</div>
+                    <p class="step-desc">Evaluates precision, speed, and confidence through Svādhyāya reflection.</p>
+                </div>
+
+                <!-- Step 5 -->
+                <div class="step-card">
+                    <div class="step-number">5</div>
+                    <div class="step-title">Adapt</div>
+                    <p class="step-desc">Recalibrates your study trajectory instantly based on new results.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                
+                <!-- Col 1 -->
+                <div class="footer-col-main">
+                    <div class="footer-logo">
+                        <div class="footer-logo-box">G</div>
+                        <span class="footer-logo-text">GuruAgent</span>
+                    </div>
+                    <p class="footer-desc">
+                        An autonomous AI tutoring ecosystem powered by modern agent reasoning and Indian Knowledge Systems.
+                    </p>
+                </div>
+
+                <!-- Col 2 -->
+                <div class="footer-col">
+                    <p class="footer-heading">Platform</p>
+                    <ul class="footer-links">
+                        <li><a href="#features">Study Plans</a></li>
+                        <li><a href="#features">AI Reasoning Feed</a></li>
+                        <li><a href="#how-it-works">Analytics Wave</a></li>
+                    </ul>
+                </div>
+
+                
+
+                <!-- Col 3 -->
+                <div class="footer-col">
+                    <p class="footer-heading">Account</p>
+                    <ul class="footer-links">
+                        <li><a href="signup.html">Create Account</a></li>
+                        <li><a href="login.html">Log In</a></li>
+                        <li><a href="#">Privacy & Terms</a></li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </footer>
+
+    <!-- Custom JS -->
+    <script src="landing.js"></script>
+</body>
+</html>
